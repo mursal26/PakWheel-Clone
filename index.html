@@ -1,0 +1,2192 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        PakWheels Clone
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class=" text-white">
+    <!-- Top bar -->
+    <div class="bg-gradient-to-b from-[#000814] to-[#00468b]">
+        <div class=" flex justify-between items-center px-4 py-1 text-sm bg-black">
+            <div class="flex items-center space-x-1">
+                <i class="fas fa-mobile-alt text-red-600">
+                </i>
+                <span>
+                    Download App via SMS
+                </span>
+            </div>
+            <div class="flex items-center space-x-4 text-white text-sm font-semibold">
+                <span class="text-red-600 cursor-pointer">
+                    اردو
+                </span>
+                <span>
+                    |
+                </span>
+                <button class="hover:underline">
+                    Sign Up
+                </button>
+                <span>
+                    |
+                </span>
+                <button class="hover:underline">
+                    Sign In
+                </button>
+            </div>
+        </div>
+        <!-- Navigation bar -->
+        <nav class="flex items-center justify-between px-6 py-4 max-w-[1200px] mx-auto">
+            <div class="flex items-center space-x-6">
+                <img alt="PakWheels.com logo with red car outline and text Pakistan's #1 automobile website"
+                    class="h-10 w-auto" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/727c660f-d871-4cfc-595f-e715dbbc30a3.jpg"
+                    width="150" />
+                <ul class="hidden md:flex space-x-8 text-white text-lg font-normal">
+                    <li class="relative group cursor-pointer">
+                        Used Cars
+                        <i class="fas fa-caret-down ml-1 text-sm">
+                        </i>
+                    </li>
+                    <li class="relative group cursor-pointer">
+                        New Cars
+                        <i class="fas fa-caret-down ml-1 text-sm">
+                        </i>
+                    </li>
+                    <li class="relative group cursor-pointer">
+                        Bikes
+                        <i class="fas fa-caret-down ml-1 text-sm">
+                        </i>
+                    </li>
+                    <li class="relative group cursor-pointer">
+                        Auto Store
+                        <i class="fas fa-caret-down ml-1 text-sm">
+                        </i>
+                    </li>
+                    <li class="cursor-pointer">
+                        Videos
+                    </li>
+                    <li class="cursor-pointer">
+                        Forums
+                    </li>
+                    <li class="cursor-pointer">
+                        Blog
+                    </li>
+                    <li class="relative group cursor-pointer flex items-center space-x-1">
+                        <span>
+                            More
+                        </span>
+                        <i class="fas fa-caret-down text-sm">
+                        </i>
+                        <span
+                            class="bg-blue-700 text-white text-xs rounded-full px-2 py-[1px] font-semibold select-none">
+                            New
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <button
+                class="hidden md:block bg-red-700 hover:bg-red-600 transition-colors duration-200 text-white font-semibold px-5 py-2 rounded">
+                Post an Ad
+                <i class="fas fa-caret-down ml-1">
+                </i>
+            </button>
+        </nav>
+        <!-- Main content -->
+        <main class="max-w-5xl mx-auto px-4 text-center mt-20">
+            <h1 class="text-4xl md:text-5xl font-normal mb-2">
+                Find Used Cars in Pakistan
+            </h1>
+            <p class="text-lg md:text-xl mb-10 font-normal">
+                With thousands of cars, we have just the right one for you
+            </p>
+            <!-- Search bar -->
+            <form aria-label="Car search form"
+                class="flex flex-col md:flex-row max-w-4xl mx-auto rounded-md overflow-hidden shadow-lg">
+                <input aria-label="Car Make or Model"
+                    class="flex-grow px-5 py-4 text-gray-700 placeholder-gray-500 focus:outline-none"
+                    placeholder="Car Make or Model" type="text" />
+                <select aria-label="Select City"
+                    class="px-5 py-4 border-l border-gray-300 text-gray-700 focus:outline-none">
+                    <option>
+                        All Cities
+                    </option>
+                </select>
+                <select aria-label="Select Price Range"
+                    class="px-5 py-4 border-l border-gray-300 text-gray-700 focus:outline-none">
+                    <option>
+                        Price Range
+                    </option>
+                </select>
+                <button aria-label="Search"
+                    class="bg-green-600 hover:bg-green-700 transition-colors duration-200 px-5 py-4 flex items-center justify-center"
+                    type="submit">
+                    <i class="fas fa-search text-white text-lg">
+                    </i>
+                </button>
+            </form>
+            <button aria-label="Advanced Filter"
+                class="mt-8 border border-white rounded px-6 py-2 text-white text-sm inline-flex items-center mx-auto">
+                Advanced Filter
+                <i class="fas fa-chevron-right ml-2">
+                </i>
+            </button>
+            <div class="h-10"></div>
+        </main>
+    </div>
+    <!-- Sell Your Car Section -->
+    <section class="max-w-4xl mx-auto mt-10 border border-gray-200 p-6">
+        <h2 class="text-center font-semibold text-gray-700 mb-4 text-sm sm:text-base">
+            Sell Your Car on PakWheels and Get the Best Price
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-6 sm:gap-12">
+            <!-- Left Box -->
+            <div class="flex-1 max-w-xs sm:max-w-[220px]">
+                <h3 class="text-blue-900 font-semibold text-sm mb-2">
+                    Post your Ad on PakWheels
+                </h3>
+                <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            Post your Ad for Free in 3 Easy Steps
+                        </span>
+                    </li>
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            Get Genuine offers from Verified Buyers
+                        </span>
+                    </li>
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            Sell your car Fast at the Best Price
+                        </span>
+                    </li>
+                </ul>
+                <button class="bg-red-700 text-white text-xs sm:text-sm px-4 py-2 rounded" type="button">
+                    Post Your Ad
+                </button>
+            </div>
+            <!-- Divider with OR -->
+            <div class="relative flex items-center justify-center w-12 sm:w-16">
+                <div class="border-l border-gray-300 h-16 absolute left-1/2 -translate-x-1/2">
+                </div>
+                <span class="bg-white text-gray-500 text-xs font-normal relative z-10">
+                    OR
+                </span>
+            </div>
+            <!-- Right Box -->
+            <div class="flex-1 max-w-xs sm:max-w-[220px]">
+                <h3 class="text-blue-700 font-semibold text-sm mb-2">
+                    Try PakWheels Sell It For Me
+                </h3>
+                <ul class="text-xs text-gray-600 space-y-1 mb-4">
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            Dedicated Sales Expert to Sell your Car
+                        </span>
+                    </li>
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            We Bargain for you and share the Best Offer
+                        </span>
+                    </li>
+                    <li class="flex items-center gap-1">
+                        <i class="fas fa-check text-green-600 text-[10px]">
+                        </i>
+                        <span>
+                            We ensure Safe &amp; Secure Transaction
+                        </span>
+                    </li>
+                </ul>
+                <button class="bg-blue-600 text-white text-xs sm:text-sm px-4 py-2 rounded" type="button">
+                    Register Your Car
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Browse Used Cars Section -->
+    <section class="bg-gray-100 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-gray-700 font-semibold text-sm sm:text-base mb-4">
+                Browse Used Cars
+            </h3>
+            <nav class="flex space-x-6 text-xs sm:text-sm text-gray-600 font-semibold mb-4 border-b border-blue-600">
+                <a class="border-b-2 border-blue-600 pb-1" href="#">
+                    Category
+                </a>
+                <a class="hover:text-blue-600" href="#">
+                    City
+                </a>
+                <a class="hover:text-blue-600" href="#">
+                    Make
+                </a>
+                <a class="hover:text-blue-600" href="#">
+                    Model
+                </a>
+                <a class="hover:text-blue-600" href="#">
+                    Budget
+                </a>
+                <a class="hover:text-blue-600" href="#">
+                    Body Type
+                </a>
+            </nav>
+            <!-- Carousel container -->
+            <div class="relative">
+                <!-- Left arrow -->
+                <button aria-label="Previous"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 z-10"
+                    type="button">
+                    <i class="fas fa-chevron-left text-xs">
+                    </i>
+                </button>
+                <!-- Items container -->
+                <div class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth px-10" tabindex="0">
+                    <!-- Each card -->
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a car with dotted lines representing automatic cars" class="mb-1" height="20"
+                            loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/15e8c14c-f3ba-42f9-e394-d372869e1d35.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Automatic cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a family car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/c6685f5e-eef4-42d8-b956-3d661f211c51.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Family Cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a small car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/67cfcac6-4a5c-434a-77a4-ec2df221ccc3.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Small cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 5 seater car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/3f677754-b61d-4596-6eec-f28d06d820eb.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            5 Seater
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a big car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/21e423b2-d0eb-40a9-1ecb-294026dd3553.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Big cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of an imported car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/61b1e277-378e-416a-fb9f-07d6de0ecc3c.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Imported cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of an old car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/95a449a9-5bc3-4d4f-ea49-d18cf0d9671d.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            Old Cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 5 door car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/b6188e38-7d12-4d4a-6b27-5b267c196896.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            5 Door
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 4 door car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/f59ff17e-1917-44be-2a96-38cc9b2558cc.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            4 Door
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 1000cc car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/cb12556b-6667-4849-fc2a-2137d244dd48.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            1000cc cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 1300cc car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/57b8f24b-98fa-4bf8-1d20-67d232486472.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            1300cc cars
+                        </span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 w-24 h-24 bg-white rounded-lg shadow-sm flex flex-col items-center justify-center p-2">
+                        <img alt="Icon of a 660cc car" class="mb-1" height="20" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/2e166aee-6117-4906-1886-0916ad33371b.jpg"
+                            width="40" />
+                        <span class="text-[10px] text-gray-600 text-center">
+                            660cc cars
+                        </span>
+                    </div>
+                </div>
+                <!-- Right arrow -->
+                <button aria-label="Next"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 z-10"
+                    type="button">
+                    <i class="fas fa-chevron-right text-xs">
+                    </i>
+                </button>
+            </div>
+            <!-- Pagination dots -->
+            <div class="flex justify-center mt-4 space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-600">
+                </span>
+                <span class="w-2.5 h-2.5 rounded-full bg-gray-400">
+                </span>
+                <span class="w-2.5 h-2.5 rounded-full bg-gray-400">
+                </span>
+                <span class="w-2.5 h-2.5 rounded-full bg-gray-400">
+                </span>
+            </div>
+        </div>
+    </section>
+    <br>
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <h2 class="text-lg font-semibold mb-6 text-gray-700">
+            PakWheels Offerings
+        </h2>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="White car with hands exchanging keys and money"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/57a20fd6-12ec-4858-d12b-83af40819c02.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        SELL IT FOR ME
+                    </p>
+                </div>
+            </article>
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="Two cars with a verification sheet behind them"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/95237f6b-464c-46ab-1fcb-e68b6d47059d.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        AUCTION SHEET VERIFICATION
+                    </p>
+                </div>
+            </article>
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="Silver car with inspector and a 200+ checkpoints badge"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/7761cd06-63b2-4337-ee88-9dbb6ae2ae2a.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        CAR INSPECTION
+                    </p>
+                </div>
+            </article>
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="Silver car with blue umbrella and shield icon"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/88d8fe97-3ff7-4a54-f21d-c95d1c01cd27.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        CAR INSURANCE
+                    </p>
+                </div>
+            </article>
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="Blue car with calculator and stacks of money"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/f0e73252-c0c6-4913-df49-1396968de002.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        CAR FINANCE
+                    </p>
+                </div>
+            </article>
+            <article class="flex items-center border border-gray-100 rounded-md p-4">
+                <img alt="Silver car with license plate icon ABC12X"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/4fe0d2c9-247c-43ec-1065-25d2c206147a.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        CAR REGISTRATION
+                    </p>
+                </div>
+            </article>
+            <article
+                class="flex items-center border border-gray-100 rounded-md p-4 md:col-span-1 lg:col-span-2 max-w-md md:max-w-none">
+                <img alt="Two cars with hands exchanging keys"
+                    class="w-[120px] h-[70px] object-contain mr-6 flex-shrink-0" height="70"
+                    src="https://storage.googleapis.com/a1aa/image/9b28a83f-cb84-4cb4-5c56-3f40c0fa77fc.jpg"
+                    width="120" />
+                <div>
+                    <h3 class="text-blue-900 font-semibold leading-tight">
+                        PakWheels
+                    </h3>
+                    <p class="text-gray-800 text-base leading-tight">
+                        OWNERSHIP TRANSFER
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-gray-800 font-semibold text-lg md:text-xl">
+                Managed by PakWheels
+            </h2>
+            <a class="text-blue-600 text-sm md:text-base hover:underline" href="#">
+                View All Managed By PakWheels Cars
+            </a>
+        </div>
+        <div class="relative">
+            <button aria-label="Previous"
+                class="absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full shadow flex items-center justify-center text-gray-600 hover:text-gray-900"
+                id="prevBtn">
+                <i class="fas fa-chevron-left text-lg">
+                </i>
+            </button>
+            <div class="flex space-x-6 overflow-x-auto no-scrollbar scroll-smooth pb-2" id="carousel">
+                <!-- Card 1 -->
+                <div class="bg-white w-64 flex-shrink-0 rounded-sm shadow">
+                    <div class="relative">
+                        <img alt="Toyota Aqua 2015 car front view parked under shade with tiled floor"
+                            class="w-full h-44 object-cover rounded-t-sm" height="180" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/48dfb785-d65e-4860-25bb-72548613de58.jpg"
+                            width="256" />
+                        <div class="absolute top-2 left-2 bg-[#b71c1c] text-white text-xs font-semibold px-2 py-0.5">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-blue-900 font-semibold text-base leading-tight mb-1">
+                            Toyota Aqua 2015
+                        </h3>
+                        <p class="text-green-600 font-medium text-sm mb-1">
+                            PKR 3,850,000
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            Lahore
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white w-64 flex-shrink-0 rounded-sm shadow">
+                    <div class="relative">
+                        <img alt="Mercedes Benz EQS 2022 car front view parked near plants in driveway"
+                            class="w-full h-44 object-cover rounded-t-sm" height="180" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/bd321bd3-1c63-4e7f-cc79-1cf02df8e410.jpg"
+                            width="256" />
+                        <div class="absolute top-2 left-2 bg-[#b71c1c] text-white text-xs font-semibold px-2 py-0.5">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-blue-900 font-semibold text-base leading-tight mb-1">
+                            Mercedes Benz EQS 2022
+                        </h3>
+                        <p class="text-green-600 font-medium text-sm mb-1">
+                            PKR 45,900,000
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            Lahore
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white w-64 flex-shrink-0 rounded-sm shadow">
+                    <div class="relative">
+                        <img alt="Honda Civic 2011 car front view parked on road with houses in background"
+                            class="w-full h-44 object-cover rounded-t-sm" height="180" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/aeb7a41d-e23d-4b28-38ab-dd3b62258cb2.jpg"
+                            width="256" />
+                        <div class="absolute top-2 left-2 bg-[#b71c1c] text-white text-xs font-semibold px-2 py-0.5">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-blue-900 font-semibold text-base leading-tight mb-1">
+                            Honda Civic 2011
+                        </h3>
+                        <p class="text-green-600 font-medium text-sm mb-1">
+                            PKR 2,350,000
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            Gujranwala
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white w-64 flex-shrink-0 rounded-sm shadow">
+                    <div class="relative">
+                        <img alt="Toyota Corolla 2015 car front view parked on street with shops and motorcycles"
+                            class="w-full h-44 object-cover rounded-t-sm" height="180" loading="lazy"
+                            src="https://storage.googleapis.com/a1aa/image/aa0866e2-1024-4568-4433-d8154e87e26c.jpg"
+                            width="256" />
+                        <div class="absolute top-2 left-2 bg-[#b71c1c] text-white text-xs font-semibold px-2 py-0.5">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-blue-900 font-semibold text-base leading-tight mb-1">
+                            Toyota Corolla 2015
+                        </h3>
+                        <p class="text-green-600 font-medium text-sm mb-1">
+                            PKR 3,700,000
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            Karachi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button aria-label="Next"
+                class="absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full shadow flex items-center justify-center text-gray-600 hover:text-gray-900"
+                id="nextBtn">
+                <i class="fas fa-chevron-right text-lg">
+                </i>
+            </button>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-gray-900 font-semibold text-xl leading-6">
+                Featured Used Cars for Sale
+            </h2>
+            <a class="text-blue-600 text-sm font-normal hover:underline" href="#">
+                View All Featured Used Cars
+            </a>
+        </div>
+        <div class="relative">
+            <div class="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth" style="scrollbar-width:none">
+                <!-- Card 1 -->
+                <div class="min-w-[280px] border border-gray-200">
+                    <div class="relative">
+                        <img alt="Black Toyota Prado 2019 car front side view parked indoors with spare tire"
+                            class="w-full h-[200px] object-cover" height="200"
+                            src="https://storage.googleapis.com/a1aa/image/af3c71ff-8eb2-4c67-abd1-7d3bbd5f2d23.jpg"
+                            width="280" />
+                        <div class="absolute top-0 left-0 bg-red-700 text-white text-xs font-normal px-3 py-1">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <h3 class="text-blue-900 font-semibold text-lg leading-6">
+                            Toyota Prado 2019
+                        </h3>
+                        <p class="text-green-600 text-sm font-normal mt-1">
+                            PKR 28,000,000
+                        </p>
+                        <p class="text-gray-400 text-sm font-normal mt-1">
+                            Lahore
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="min-w-[280px] border border-gray-200">
+                    <div class="relative">
+                        <img alt="Black Mercedes Benz E Class 2014 car rear side view outdoor with city background"
+                            class="w-full h-[200px] object-cover" height="200"
+                            src="https://storage.googleapis.com/a1aa/image/2958cd69-3fc4-4dc7-7020-f931772f4e32.jpg"
+                            width="280" />
+                        <div class="absolute top-0 left-0 bg-red-700 text-white text-xs font-normal px-3 py-1">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <h3 class="text-blue-900 font-semibold text-lg leading-6">
+                            Mercedes Benz E Class 2014
+                        </h3>
+                        <p class="text-green-600 text-sm font-normal mt-1">
+                            PKR 14,950,000
+                        </p>
+                        <p class="text-gray-400 text-sm font-normal mt-1">
+                            Islamabad
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="min-w-[280px] border border-gray-200">
+                    <div class="relative">
+                        <img alt="Black Toyota C-HR 2018 car front view outdoor on road with city buildings"
+                            class="w-full h-[200px] object-cover" height="200"
+                            src="https://storage.googleapis.com/a1aa/image/1d2a455e-9116-4d72-f70a-d8593ed3cf45.jpg"
+                            width="280" />
+                        <div class="absolute top-0 left-0 bg-red-700 text-white text-xs font-normal px-3 py-1">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <h3 class="text-blue-900 font-semibold text-lg leading-6">
+                            Toyota C-HR 2018
+                        </h3>
+                        <p class="text-green-600 text-sm font-normal mt-1">
+                            PKR 7,200,000
+                        </p>
+                        <p class="text-gray-400 text-sm font-normal mt-1">
+                            Karachi
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="min-w-[280px] border border-gray-200">
+                    <div class="relative">
+                        <img alt="Black Toyota Prado 2013 car front side view outdoor parked in driveway"
+                            class="w-full h-[200px] object-cover" height="200"
+                            src="https://storage.googleapis.com/a1aa/image/375c3fd6-9e5a-4467-987f-b2dab791ea5c.jpg"
+                            width="280" />
+                        <div class="absolute top-0 left-0 bg-red-700 text-white text-xs font-normal px-3 py-1">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div class="px-4 py-3">
+                        <h3 class="text-blue-900 font-semibold text-lg leading-6">
+                            Toyota Prado 2013
+                        </h3>
+                        <p class="text-green-600 text-sm font-normal mt-1">
+                            PKR 18,900,000
+                        </p>
+                        <p class="text-gray-400 text-sm font-normal mt-1">
+                            Lahore
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Left arrow -->
+            <button aria-label="Scroll left"
+                class="hidden md:flex absolute top-1/2 -left-6 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-gray-900"
+                onclick="scrollLeft()">
+                <i class="fas fa-chevron-left">
+                </i>
+            </button>
+            <!-- Right arrow -->
+            <button aria-label="Scroll right"
+                class="hidden md:flex absolute top-1/2 -right-6 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-gray-900"
+                onclick="scrollRight()">
+                <i class="fas fa-chevron-right">
+                </i>
+            </button>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-gray-800 text-xl font-semibold">
+                Featured New Cars
+            </h2>
+            <a class="text-blue-600 text-sm hover:underline" href="#">
+                View All New Cars
+            </a>
+        </div>
+        <nav class="flex space-x-8 border-b border-gray-300 mb-6 text-gray-700 text-base font-normal">
+            <button class="font-semibold text-gray-900 border-b-2 border-blue-600 pb-2">
+                Popular
+            </button>
+            <button class="hover:text-gray-900">
+                Upcoming
+            </button>
+            <button class="hover:text-gray-900">
+                Newly Launched
+            </button>
+        </nav>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Toyota Corolla -->
+            <div class="bg-white p-4">
+                <img alt="Side view of a silver Toyota Corolla car" class="w-full h-auto mb-4" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/f1ca17d3-cef9-4c1d-4140-d1c0918d5641.jpg"
+                    width="400" />
+                <h3 class="text-blue-900 font-semibold text-lg mb-1 text-center">
+                    Toyota Corolla
+                </h3>
+                <p class="text-green-600 text-center text-sm mb-3">
+                    PKR 59.7 - 75.5 lacs
+                </p>
+                <div class="flex justify-center items-center space-x-1 text-gray-500 text-sm">
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star-half-alt star-filled">
+                    </i>
+                    <i class="far fa-star">
+                    </i>
+                    <span>
+                        635 Reviews
+                    </span>
+                </div>
+            </div>
+            <!-- Suzuki Alto -->
+            <div class="bg-white p-4">
+                <img alt="Front side view of a white Suzuki Alto car" class="w-full h-auto mb-4" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/9d3b0227-37aa-44e3-74c4-18d3480bd541.jpg"
+                    width="400" />
+                <h3 class="text-blue-900 font-semibold text-lg mb-1 text-center">
+                    Suzuki Alto
+                </h3>
+                <p class="text-green-600 text-center text-sm mb-3">
+                    PKR 23.3 - 31.4 lacs
+                </p>
+                <div class="flex justify-center items-center space-x-1 text-gray-500 text-sm">
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star-half-alt star-filled">
+                    </i>
+                    <i class="far fa-star">
+                    </i>
+                    <span>
+                        221 Reviews
+                    </span>
+                </div>
+            </div>
+            <!-- Honda City -->
+            <div class="bg-white p-4">
+                <img alt="Side view of a silver Honda City car" class="w-full h-auto mb-4" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/0722c252-bc48-4031-5478-673d4450788f.jpg"
+                    width="400" />
+                <h3 class="text-blue-900 font-semibold text-lg mb-1 text-center">
+                    Honda City
+                </h3>
+                <p class="text-green-600 text-center text-sm mb-3">
+                    PKR 46.5 - 58.5 lacs
+                </p>
+                <div class="flex justify-center items-center space-x-1 text-gray-500 text-sm">
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star-half-alt star-filled">
+                    </i>
+                    <i class="far fa-star">
+                    </i>
+                    <span>
+                        465 Reviews
+                    </span>
+                </div>
+            </div>
+            <!-- Honda Civic -->
+            <div class="bg-white p-4">
+                <img alt="Side view of a white Honda Civic car" class="w-full h-auto mb-4" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/537287be-67e1-415d-a7fb-41526fd48fa8.jpg"
+                    width="400" />
+                <h3 class="text-blue-900 font-semibold text-lg mb-1 text-center">
+                    Honda Civic
+                </h3>
+                <p class="text-green-600 text-center text-sm mb-3">
+                    PKR 86.6 - 99.0 lacs
+                </p>
+                <div class="flex justify-center items-center space-x-1 text-gray-500 text-sm">
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star star-filled">
+                    </i>
+                    <i class="fas fa-star-half-alt star-filled">
+                    </i>
+                    <i class="far fa-star">
+                    </i>
+                    <span>
+                        374 Reviews
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-screen-xl mx-auto px-4 py-6">
+        <h2 class="text-gray-800 text-xl font-sans font-normal mb-8">
+            New Cars by Make
+        </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-8 gap-x-12">
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Suzuki logo red stylized S letter inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/c8d13bf4-71f9-46b5-562b-1e3a0ef24c77.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Suzuki
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Toyota logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/709507d1-7fae-4953-f31d-2f49a39d2abd.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Toyota
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Honda logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/c7d09c34-bc37-41f1-b801-487733263f69.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Honda
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="KIA logo black stylized letters inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/cef4fc3f-959b-4595-8b69-f0d0d5c59420.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        KIA
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Hyundai logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/0c194e47-9227-4b77-2e1c-c165b5e5a079.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Hyundai
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="MG logo red emblem inside white circle" class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/d4a11429-2eee-4415-0e11-6f4f345171b2.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        MG
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="BYD logo red stylized letters inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/9cf76e22-ea58-4f51-ecc2-2983bada1906.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        BYD
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Changan logo black emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/07738c44-1908-4b54-f2b1-b7b09c660df1.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Changan
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="BMW logo black and blue emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/c1b4271a-87c3-47ac-7683-ad36f121fbb9.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        BMW
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Audi logo black four rings emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/aea93b17-0c5c-4371-9e18-539994081e49.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Audi
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Proton logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/9176e913-3135-4a80-2dc1-3b4f6dc47ee0.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Proton
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Porsche logo yellow red and black emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/6c41d91d-5804-43af-4b10-7672324aab15.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Porsche
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Mercedes Benz logo silver and blue three pointed star emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/fcf31ba1-69fb-46b9-517f-73609d771f7c.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Mercedes Benz
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Prince logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/ca413b03-8724-4475-e0aa-6a61b0e9e90d.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Prince
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="DFSK logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/001c3fe2-aced-4c37-1823-54687df8a10e.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        DFSK
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Isuzu logo white and gray emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/3539f017-cc62-4e21-bdcf-df0bc806b8c7.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Isuzu
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Haval logo white and gray emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/fff7e54c-8c90-416c-4824-2b26755e5f63.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Haval
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="BAIC logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/1f517035-b457-4778-5164-b778657dc76a.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        BAIC
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Peugeot logo black and white emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/05def728-cef9-4f6c-5dc1-cb8e3409b005.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Peugeot
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="ORA logo black and white emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/88ebf94b-19a3-4547-6776-472020b5b0a1.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        ORA
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="JAC logo gray and white emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/6b370098-61c8-42c2-bc74-ce768402252a.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        JAC
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Tank logo silver emblem inside white circle" class="max-w-[64px] max-h-[64px]"
+                            height="64"
+                            src="https://storage.googleapis.com/a1aa/image/c38e5b0b-3c61-40ce-27d5-2d0cb2551a97.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Tank
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="JW Forland logo red and white emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/41aca8a3-a980-445c-1cc1-a3b5d396cb0a.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        JW Forland
+                    </span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-20 h-20 rounded-full border border-gray-200 flex items-center justify-center">
+                        <img alt="Chery logo gray and white emblem inside white circle"
+                            class="max-w-[64px] max-h-[64px]" height="64"
+                            src="https://storage.googleapis.com/a1aa/image/4ec551bc-e292-429a-e179-86c1b647d501.jpg"
+                            width="64" />
+                    </div>
+                    <span class="text-blue-900 text-sm font-semibold font-sans">
+                        Chery
+                    </span>
+                </div>
+            </div>
+        </div>
+<br><br>
+  <div class="max-w-6xl mx-auto px-6 py-6">
+   <div class="flex justify-between items-center mb-6">
+    <h2 class="text-gray-800 font-semibold text-lg">
+     Car Comparisons
+    </h2>
+    <a class="text-blue-600 text-sm" href="#">
+     All Car Comparisons
+    </a>
+   </div>
+   <div class="bg-white rounded shadow p-6 flex flex-col md:flex-row md:space-x-12 max-w-4xl mx-auto">
+    <div class="flex flex-col items-center md:flex-1">
+     <div class="relative flex items-center justify-center space-x-6">
+      <img alt="White Changan Oshan X7 car side view" class="w-40 h-auto" height="100" src="https://storage.googleapis.com/a1aa/image/59139db1-f38b-4a67-1093-6f2195d8af90.jpg" width="160"/>
+      <div class=" bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold text-lg" style="top: 40%">
+       VS
+      </div>
+      <img alt="Blue Haval H6 car side view" class="w-40 h-auto" height="100" src="https://storage.googleapis.com/a1aa/image/2ef9d90c-e2c7-4f7a-6815-044f094ecaf5.jpg" width="160"/>
+     </div>
+     <div class="flex justify-between w-full mt-4 px-4 text-blue-900 font-semibold text-base max-w-md">
+      <span>
+       Changan Oshan X7
+      </span>
+      <span>
+       Haval H6
+      </span>
+     </div>
+     <button class="mt-4 w-full max-w-md border border-blue-400 text-blue-700 text-center py-2 rounded hover:bg-blue-50">
+      View Comparison
+     </button>
+    </div>
+    <div class="flex flex-col justify-center md:flex-1 space-y-8 mt-8 md:mt-0 text-center text-gray-800 text-base max-w-xs mx-auto">
+     <div>
+      <p>
+       BMW 7 Series
+      </p>
+      <div class="bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold text-lg mx-auto my-2">
+       VS
+      </div>
+      <p>
+       Audi A8
+      </p>
+      <hr class="border-t border-gray-300 mt-4"/>
+     </div>
+     <div>
+      <p>
+       Proton X70
+      </p>
+      <div class="bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold text-lg mx-auto my-2">
+       VS
+      </div>
+      <p>
+       KIA Sportage
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-10">
+   <h1 class="text-2xl font-semibold mb-8">
+    Auto Store Car Parts &amp; Accessories
+   </h1>
+   <nav class="flex space-x-10 border-b border-gray-200 mb-8 text-lg">
+    <button aria-current="page" class="pb-2 font-semibold border-b-4 border-blue-500 text-gray-800">
+     Sub Category
+    </button>
+    <button class="pb-2 text-gray-700 hover:text-gray-900">
+     Make
+    </button>
+    <button class="pb-2 text-gray-700 hover:text-gray-900">
+     Model
+    </button>
+    <button class="pb-2 text-gray-700 hover:text-gray-900">
+     Brand
+    </button>
+   </nav>
+   <div class="relative">
+    <!-- Left arrow -->
+    <button aria-label="Previous" class="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-white shadow-md rounded-full w-12 h-12 flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
+     <i class="fas fa-chevron-left text-lg">
+     </i>
+    </button>
+    <!-- Carousel container -->
+    <div class="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth px-1" tabindex="0">
+     <!-- Each card -->
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Yellow car washer machine with hose and wheels" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/5adc4825-47a0-4fe6-2f0d-2602cec1ba36.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Car Washer
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Car tyre with silver alloy rim on white background" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/f17a9a64-51ff-4ee0-ffaa-7d037d97c8de.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Tyres
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Black full face motorcycle helmet" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/92e42335-e524-4a43-9f00-dbafabb8b123.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Helmets
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Green car key remote with keychain" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/49fa2a5e-e47e-4919-08fe-06f4aa42df8b.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Keychains
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Black car battery with red and blue terminals" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/4f315a0b-6c8b-49e8-f14a-dedd50aad5f5.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Car Battery
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Silver alloy car rim with five spokes" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/79e525a0-7197-43e4-224e-ec3a483ca3bd.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Alloy Rims
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Golden container of engine oil with handle" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/4a9a395c-1ba9-4db8-e07b-73e154223ecc.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Engine Oil
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="White car USB charger adapter" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/abe86b9c-6799-4707-13dd-5d7e73117083.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Car Charger
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Stack of three microfiber cloths in blue, pink, and yellow" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/15af2e90-3e0a-48ae-ad31-c590e221b78b.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Microfiber Cloth
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Small black GPS tracker device" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/94e76862-8a1c-4eb4-212a-4556cb2a8b8c.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       GPS Tracker
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Car engine with multiple components visible" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/f4b7c335-ca1f-4bf4-44fa-0bf2c2955ded.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Engines For Sale
+      </span>
+     </div>
+     <div class="flex-shrink-0 w-36 bg-white rounded-lg shadow-md p-4 flex flex-col items-center space-y-3">
+      <img alt="Silver fuel pump component with connectors" class="w-20 h-20 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/ca2ec915-ea72-436c-c693-90b648f66c10.jpg" width="80"/>
+      <span class="text-center text-gray-600 text-base">
+       Fuel Pump
+      </span>
+     </div>
+    </div>
+    <!-- Right arrow -->
+    <button aria-label="Next" class="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-white shadow-md rounded-full w-12 h-12 flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
+     <i class="fas fa-chevron-right text-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Pagination dots -->
+   <div class="flex justify-center mt-6 space-x-2">
+    <span class="w-3 h-3 rounded-full bg-blue-500">
+    </span>
+    <span class="w-3 h-3 rounded-full bg-gray-300">
+    </span>
+   </div>
+  </div>
+  <!-- Bottom right close icon -->
+  <button aria-label="Close" class="fixed bottom-4 right-4 w-6 h-6 text-black">
+   <i class="fas fa-times">
+   </i>
+  </button>
+
+  <div class="max-w-full px-4 py-4">
+   <h2 class="text-gray-800 font-semibold text-lg mb-4">
+    New Bikes by Make
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-8 justify-items-center">
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Honda wing logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/f1686bdb-2e0a-4677-732f-f14ef918fb94.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Honda
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Yamaha tuning fork logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/5dde92e3-9443-46b1-1596-8d5d8695480f.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Yamaha
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Suzuki S logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/b77d9577-a4fc-4514-c2b2-4c182218b7aa.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Suzuki
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Golden Unique logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/6b4a4af6-3e51-4e6a-9fa9-a91e0e8c9d09.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Unique
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Black and white Metro shield logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/6525e95e-d1cf-4d3a-ff9b-ea747abea27d.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Metro
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Yellow Hi Speed logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/ea9a1185-53e1-4be8-1822-84bcc511094a.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Hi Speed
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red United logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/4b320167-64b9-4f44-1709-8582c050a337.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      United
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="BMW roundel logo with blue and white quadrants on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/078bb31f-94b1-4564-750b-4d32a462dbdd.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      BMW
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Golden Road Prince wings logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/b27093a4-86cb-486d-2dbd-36e1876ce749.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Road Prince
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Green Benelli badge logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/6858699a-74be-4e25-b3c0-122abb486bb7.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Benelli
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Lectrix logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/f55b4f42-0155-4d84-9ee3-922b6d71b5fe.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Lectrix
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white border-4 border-white flex items-center justify-center shadow">
+      <img alt="Green gradient Evee logo on white circular background with white border" class="w-12 h-12 rounded-full" height="64" src="https://storage.googleapis.com/a1aa/image/9a781da2-ee71-47d2-7123-6774b4a044aa.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Evee
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Green lightning bolt Jolta Electric logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/71988b63-3b78-469e-93d0-97761bc5b7df.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Jolta Electric
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Yellow and black Super Power Motorcycle logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/8e848d58-54fd-456a-e5da-e8836aad3ffd.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Super Power
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Orange Keeway logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/af5e9a31-71e9-441f-a60d-70f2a2bc044e.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      KEEWAY
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Kawasaki logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/ed67fe8d-06ff-46de-dd23-ea05d5072a16.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Kawasaki
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Orange Benling shield logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/4abfc32d-7a02-482b-08a5-445f327388bc.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Benling
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Super Star logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/cb70698e-0373-440d-95d9-9433d69bb7f2.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Super Star
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Black Vlektra Electric Motorcycles logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/92d8e369-71dd-4a5e-0c0e-00464c5d99b8.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Vlektra
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Orange Crown logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/20a820bf-8a96-4603-57de-f254c4d46b04.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Crown
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Blue Lifan logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/017a2bfc-c648-4cc9-614c-0be78f3af011.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Lifan
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Red Ezbike logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/2f904051-1e97-4059-6afd-b709e457e7ef.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Ezbike
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Orange Yadea logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/367b6a9c-8b28-4a39-2266-2330e283bfbb.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      Yadea
+     </span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+     <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow">
+      <img alt="Black and red Overdrive logo on white circular background" class="w-12 h-12" height="64" src="https://storage.googleapis.com/a1aa/image/d70f3d53-a876-4b4e-2d5d-c9f81973effa.jpg" width="64"/>
+     </div>
+     <span class="text-blue-900 font-semibold text-sm">
+      OVERDRIVE
+     </span>
+    </div>
+   </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-8">
+   <div class="flex justify-between items-center mb-6">
+    <h2 class="text-gray-800 font-semibold text-lg">
+     Popular New Bikes
+    </h2>
+    <a class="text-blue-600 text-sm hover:underline" href="#">
+     View All New Bikes
+    </a>
+   </div>
+   <div class="relative">
+    <button aria-label="Previous" class="absolute top-1/2 -left-6 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700">
+     <i class="fas fa-chevron-left">
+     </i>
+    </button>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+     <div class="border border-gray-200 p-4">
+      <img alt="Red Honda CD 70 motorcycle side view" class="mx-auto mb-4" height="180" src="https://storage.googleapis.com/a1aa/image/64fe9f77-f649-413b-b525-4c6fee48bd33.jpg" width="300"/>
+      <h3 class="text-center text-blue-900 font-semibold text-base mb-1">
+       Honda CD 70
+      </h3>
+      <p class="text-center text-green-600 text-sm mb-2">
+       PKR 157,900
+      </p>
+      <div class="flex justify-center items-center space-x-1 text-orange-500">
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <span class="text-gray-500 ml-2 text-sm font-medium">
+        64 Reviews
+       </span>
+      </div>
+     </div>
+     <div class="border border-gray-200 p-4">
+      <img alt="Red Honda CG 125 motorcycle side view" class="mx-auto mb-4" height="180" src="https://storage.googleapis.com/a1aa/image/91e11c20-b606-4790-e5e0-a7aa2b58c07b.jpg" width="300"/>
+      <h3 class="text-center text-blue-900 font-semibold text-base mb-1">
+       Honda CG 125
+      </h3>
+      <p class="text-center text-green-600 text-sm mb-2">
+       PKR 234,900
+      </p>
+      <div class="flex justify-center items-center space-x-1 text-orange-500">
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <span class="text-gray-500 ml-2 text-sm font-medium">
+        107 Reviews
+       </span>
+      </div>
+     </div>
+     <div class="border border-gray-200 p-4">
+      <img alt="Red Suzuki GS 150 motorcycle side view" class="mx-auto mb-4" height="180" src="https://storage.googleapis.com/a1aa/image/42eb2cb0-8d5c-4624-0c6c-0daaa154911e.jpg" width="300"/>
+      <h3 class="text-center text-blue-900 font-semibold text-base mb-1">
+       Suzuki GS 150
+      </h3>
+      <p class="text-center text-green-600 text-sm mb-2">
+       PKR 389,000
+      </p>
+      <div class="flex justify-center items-center space-x-1 text-orange-500">
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <span class="text-gray-500 ml-2 text-sm font-medium">
+        35 Reviews
+       </span>
+      </div>
+     </div>
+     <div class="border border-gray-200 p-4">
+      <img alt="Blue Yamaha YBR 125 motorcycle side view" class="mx-auto mb-4" height="180" src="https://storage.googleapis.com/a1aa/image/f54d659a-d0ae-48c9-f6b1-af85e683a267.jpg" width="300"/>
+      <h3 class="text-center text-blue-900 font-semibold text-base mb-1">
+       Yamaha YBR 125
+      </h3>
+      <p class="text-center text-green-600 text-sm mb-2">
+       PKR 466,000
+      </p>
+      <div class="flex justify-center items-center space-x-1 text-orange-500">
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="fas fa-star">
+       </i>
+       <i class="far fa-star">
+       </i>
+       <span class="text-gray-500 ml-2 text-sm font-medium">
+        49 Reviews
+       </span>
+      </div>
+     </div>
+    </div>
+    <button aria-label="Next" class="absolute top-1/2 -right-6 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700">
+     <i class="fas fa-chevron-right">
+     </i>
+    </button>
+   </div>
+  </div>
+
+  <div class="max-w-full mx-auto px-6 py-6">
+    <div class="flex justify-between items-center mb-6">
+     <h2 class="text-gray-800 font-semibold text-lg">
+      Browse Our Videos
+     </h2>
+     <a class="text-blue-600 text-sm font-normal hover:underline" href="#">
+      View All Videos
+     </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+     <div class="col-span-1 sm:col-span-2 lg:col-span-3 bg-white">
+      <div class="relative">
+       <img alt="Tucson Hybrid AWD vs FWD Comparison with two cars and a man standing" class="w-full" src="https://storage.googleapis.com/a1aa/image/96ee266a-e1f7-45c4-daf4-2220d177c021.jpg" width="600"/>
+       <button aria-label="Play video" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-70 rounded-full p-4 text-white">
+        <i class="fas fa-play">
+        </i>
+       </button>
+      </div>
+      <a class="block bg-white text-blue-900 font-semibold text-sm px-4 py-2 truncate" href="#" title="Hyundai Tucson Hybrid 2025 Variants Comparison! Which One...">
+       Hyundai Tucson Hybrid 2025 Variants Comparison! Which On...
+      </a>
+     </div>
+     <div class="bg-white">
+      <div class="relative">
+       <img alt="Seres 3, MG ZS EV &amp; BYD Atto 3 Comparison thumbnail with play button" class="w-full" height="158" src="https://storage.googleapis.com/a1aa/image/ca0bcd3a-78d5-4a2a-2b4d-3ba30080cea1.jpg" width="280"/>
+       <button aria-label="Play video" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-70 rounded-full p-3 text-white">
+        <i class="fas fa-play">
+        </i>
+       </button>
+      </div>
+      <a class="block bg-white text-blue-900 font-semibold text-sm px-3 py-2 truncate" href="#" title="Seres 3, MG ZS EV &amp; BYD Atto 3 Comparison!">
+       Seres 3, MG ZS EV &amp; BYD Atto 3 ...
+      </a>
+     </div>
+     <div class="bg-white">
+      <div class="relative">
+       <img alt="Black Corvette C8 car with 9 Crore Only text and play button" class="w-full" height="158" src="https://storage.googleapis.com/a1aa/image/128326c6-9dd9-4364-9774-0f4a234f21d6.jpg" width="280"/>
+       <button aria-label="Play video" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-70 rounded-full p-3 text-white">
+        <i class="fas fa-play">
+        </i>
+       </button>
+      </div>
+      <a class="block bg-white text-blue-900 font-semibold text-sm px-3 py-2 truncate" href="#" title="Owning a Corvette C8 in Pakistan">
+       Owning a Corvette C8 in Pakista...
+      </a>
+     </div>
+     <div class="bg-white">
+      <div class="relative">
+       <img alt="White Jetour 7 Seater Family car with blue sky background and play button" class="w-full" height="158" src="https://storage.googleapis.com/a1aa/image/00175e72-5afd-4141-253f-bbafb171edeb.jpg" width="280"/>
+       <button aria-label="Play video" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-70 rounded-full p-3 text-white">
+        <i class="fas fa-play">
+        </i>
+       </button>
+      </div>
+      <a class="block bg-white text-blue-900 font-semibold text-sm px-3 py-2 truncate" href="#" title="Jetour X70 Plus First Look Review">
+       Jetour X70 Plus First Look Review
+      </a>
+     </div>
+     <div class="bg-white">
+      <div class="relative">
+       <img alt="Black Jetour Dashing car with man leaning on it and play button" class="w-full" height="158" src="https://storage.googleapis.com/a1aa/image/02a99434-0364-47d0-474b-cac19eb79b5a.jpg" width="280"/>
+       <button aria-label="Play video" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-70 rounded-full p-3 text-white">
+        <i class="fas fa-play">
+        </i>
+       </button>
+      </div>
+      <a class="block bg-white text-blue-900 font-semibold text-sm px-3 py-2 truncate" href="#" title="Jetour Dashin First Look Review">
+       Jetour Dashin First Look Review
+      </a>
+     </div>
+    </div>
+</div>
+
+  <div class="max-w-6xl mx-auto px-4 py-10">
+   <!-- Header and tabs -->
+   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+    <h2 class="text-gray-900 font-semibold text-lg mb-4 sm:mb-0">
+     News, Reviews &amp; Discussions
+    </h2>
+    <a class="text-sm text-blue-600 hover:underline whitespace-nowrap" href="#">
+     Read All Recent News
+    </a>
+   </div>
+   <div class="flex space-x-8 border-b border-gray-200 mb-6 text-sm text-gray-700">
+    <button aria-current="page" class="active-tab pb-2 focus:outline-none" type="button">
+     Automotive News
+    </button>
+    <button class="pb-2 hover:text-gray-900 focus:outline-none" type="button">
+     Car Reviews
+    </button>
+    <button class="pb-2 hover:text-gray-900 focus:outline-none" type="button">
+     Discussions
+    </button>
+   </div>
+   <!-- News items -->
+   <div class="space-y-6 max-w-3xl">
+    <div class="flex space-x-4">
+     <img alt="Compact black car parked on a road with trees in background" class="w-[100px] h-[70px] object-cover flex-shrink-0" height="70" src="https://storage.googleapis.com/a1aa/image/95d200ed-4ca6-495a-be94-6e9197bc7334.jpg" width="100"/>
+     <div class="text-xs text-gray-800">
+      <h3 class="font-semibold text-gray-900 leading-tight">
+       Kia Picanto AT Gets Price Hike from May 1, 2025
+      </h3>
+      <p class="text-gray-500 mt-0.5 mb-1">
+       April 30, 2025
+      </p>
+      <p class="leading-tight">
+       Kia Lucky Motors has officially announced a price revision for its
+            popular compact hatchback, the Kia Picanto AT. According to a
+            customer notice issued by the company, the price increase will take
+            effect from May 1, 2025. New Pricing Details
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4">
+     <img alt="Petrol station illuminated at night with green and yellow lights" class="w-[100px] h-[70px] object-cover flex-shrink-0" height="70" src="https://storage.googleapis.com/a1aa/image/17262f86-afd0-4ca8-eb85-41cdd8a45737.jpg" width="100"/>
+     <div class="text-xs text-gray-800">
+      <h3 class="font-semibold text-gray-900 leading-tight">
+       Petrol Price in Pakistan Reduced by Rs.2/Litre
+      </h3>
+      <p class="text-gray-500 mt-0.5 mb-1">
+       April 30, 2025
+      </p>
+      <p class="leading-tight">
+       The Government of Pakistan has officially reduced the prices of
+            petrol and high-speed diesel for the first half of May 2025.
+            According to the latest press release issued by the Finance Division
+            on April 30, prices have been revised at the
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- App section -->
+   <div class="mt-16 flex flex-col lg:flex-row lg:items-center lg:justify-between max-w-6xl">
+    <div class="max-w-md">
+     <h3 class="text-blue-900 font-semibold text-lg mb-2">
+      Get The PakWheels App
+     </h3>
+     <p class="text-xs text-gray-700 mb-4 leading-tight">
+      Buy &amp; Sell Cars, Bikes and Auto Parts faster and better using our App
+     </p>
+     <div class="flex space-x-2">
+      <img alt="Google Play Store badge black background with white text" class="h-7 w-auto object-contain" height="30" src="https://storage.googleapis.com/a1aa/image/69aa3cf1-3aa8-4b0a-2a02-e622f833adae.jpg" width="90"/>
+      <img alt="Apple App Store badge black background with white text" class="h-7 w-auto object-contain" height="30" src="https://storage.googleapis.com/a1aa/image/f295f4ff-eb59-4994-8b63-992dd8c89bd1.jpg" width="90"/>
+      <img alt="Huawei AppGallery badge black background with white text" class="h-7 w-auto object-contain" height="30" src="https://storage.googleapis.com/a1aa/image/80b167f9-2289-46ef-8374-ac011256b53c.jpg" width="90"/>
+     </div>
+    </div>
+    <div class="flex items-center mt-8 lg:mt-0 space-x-6">
+     <div class="flex items-center space-x-2">
+      <img alt="Black and white QR code square" class="w-[70px] h-[70px] object-contain" height="70" src="https://storage.googleapis.com/a1aa/image/8f85480d-c9ca-4e06-63b9-cf6cdaee312f.jpg" width="70"/>
+      <div class="text-xs text-gray-700 whitespace-nowrap">
+       <p>
+        Scan the QR
+       </p>
+       <p>
+        to get the App
+       </p>
+      </div>
+     </div>
+     <img alt="Two smartphones side by side showing PakWheels app screens" class="w-[140px] h-[140px] object-contain" height="140" src="https://storage.googleapis.com/a1aa/image/da4738d8-5664-4bab-a8b8-175b49c92ce1.jpg" width="140"/>
+    </div>
+   </div>
+  </div>
+
+  <footer class="max-w-[1280px] mx-auto px-5 sm:px-10 md:px-16 pt-10 pb-6 bg-gray-800">
+   <div class="flex flex-wrap justify-between gap-y-10">
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars By Make
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Toyota Cars for Sale
+      </li>
+      <li>
+       Suzuki Cars for Sale
+      </li>
+      <li>
+       Honda Cars for Sale
+      </li>
+      <li>
+       Daihatsu Cars for Sale
+      </li>
+      <li>
+       Mitsubishi Cars for Sale
+      </li>
+      <li>
+       Nissan Cars for Sale
+      </li>
+      <li>
+       Mercedes Cars for Sale
+      </li>
+      <li>
+       Hyundai Cars for Sale
+      </li>
+      <li>
+       BMW Cars for Sale
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars By City
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Cars in Karachi
+      </li>
+      <li>
+       Cars in Lahore
+      </li>
+      <li>
+       Cars in Islamabad
+      </li>
+      <li>
+       Cars in Rawalpindi
+      </li>
+      <li>
+       Cars in Peshawar
+      </li>
+      <li>
+       Cars in Faisalabad
+      </li>
+      <li>
+       Cars in Multan
+      </li>
+      <li>
+       Cars in Gujranwala
+      </li>
+      <li>
+       Cars in Sialkot
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Explore PakWheels
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Used Cars
+      </li>
+      <li>
+       Used Bikes
+      </li>
+      <li>
+       New Cars
+      </li>
+      <li>
+       Auto Parts &amp; Accessories
+      </li>
+      <li>
+       Cool Rides
+      </li>
+      <li>
+       Forums
+      </li>
+      <li>
+       Autoshow
+      </li>
+      <li>
+       Sitemap
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      PakWheels.com
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       About PakWheels.com
+      </li>
+      <li>
+       Our Products
+      </li>
+      <li>
+       Advertise With Us
+      </li>
+      <li>
+       How To Pay
+      </li>
+      <li>
+       FAQs
+      </li>
+      <li>
+       Refunds &amp; Returns
+      </li>
+      <li>
+       Careers
+      </li>
+      <li>
+       Contact Us
+      </li>
+     </ul>
+    </div>
+    <div class="w-full sm:w-auto md:w-1/4">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Sell On PakWheels
+     </h3>
+     <ul class="space-y-1 text-sm leading-6 mb-6">
+      <li>
+       Sell Your Car
+      </li>
+      <li>
+       Sell Your Bike
+      </li>
+      <li>
+       Sell Accessory
+      </li>
+     </ul>
+     <h4 class="text-white font-semibold mb-2">
+      Subscribe to our Newsletter
+     </h4>
+     <form class="flex max-w-md">
+      <input class="flex-grow px-4 py-2 text-[#21292f] text-sm outline-none" placeholder="name@email.com" type="email"/>
+      <button class="bg-[#4caf50] text-white font-semibold px-4 py-2" type="submit">
+       Subscribe
+      </button>
+     </form>
+     <div class="mt-8">
+      <h4 class="text-white font-semibold mb-3">
+       Follow Us
+      </h4>
+      <div class="flex space-x-4">
+       <a aria-label="Twitter" class="bg-[#9a9a9a] rounded-full w-10 h-10 flex items-center justify-center text-[#21292f] hover:opacity-80" href="#">
+        <i class="fab fa-twitter">
+        </i>
+       </a>
+       <a aria-label="Facebook" class="bg-[#9a9a9a] rounded-full w-10 h-10 flex items-center justify-center text-[#21292f] hover:opacity-80" href="#">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a aria-label="Pinterest" class="bg-[#9a9a9a] rounded-full w-10 h-10 flex items-center justify-center text-[#21292f] hover:opacity-80" href="#">
+        <i class="fab fa-pinterest-p">
+        </i>
+       </a>
+       <a aria-label="Instagram" class="bg-[#9a9a9a] rounded-full w-10 h-10 flex items-center justify-center text-[#21292f] hover:opacity-80" href="#">
+        <i class="fab fa-instagram">
+        </i>
+       </a>
+       <a aria-label="YouTube" class="bg-[#9a9a9a] rounded-full w-10 h-10 flex items-center justify-center text-[#21292f] hover:opacity-80" href="#">
+        <i class="fab fa-youtube">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="mt-8">
+      <h4 class="text-white font-semibold mb-3">
+       Download Mobile Apps
+      </h4>
+      <div class="flex flex-wrap gap-3">
+       <a class="block" href="#">
+        <img alt="Google Play Store badge with black background and white text" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/74ab9207-6813-49da-bebd-c468bb71fcaf.jpg" width="150"/>
+       </a>
+       <a class="block" href="#">
+        <img alt="Apple App Store badge with black background and white text" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/ae3df208-9b20-4fc7-1169-4fca47b35a85.jpg" width="150"/>
+       </a>
+       <a class="block" href="#">
+        <img alt="Huawei AppGallery badge with black background and white text" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/70f93431-9634-4dcb-f532-e3dafe633646.jpg" width="150"/>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="flex flex-wrap justify-between gap-y-10 mt-10">
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars by Category
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Jeep
+      </li>
+      <li>
+       Japanese Cars
+      </li>
+      <li>
+       Imported Cars
+      </li>
+      <li>
+       Automatic Cars
+      </li>
+      <li>
+       Low Priced Cars
+      </li>
+      <li>
+       4x4 Cars
+      </li>
+      <li>
+       660cc Cars
+      </li>
+      <li>
+       1000cc Cars
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars by Body Type
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Hatchback
+      </li>
+      <li>
+       Sedan
+      </li>
+      <li>
+       SUV
+      </li>
+      <li>
+       Crossover
+      </li>
+      <li>
+       Mini Van
+      </li>
+      <li>
+       Compact SUV
+      </li>
+      <li>
+       Van
+      </li>
+      <li>
+       MPV
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars by Color
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       <span class="text-white">
+        White
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Silver
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Black
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Grey
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Blue
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Red
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Green
+       </span>
+       Cars
+      </li>
+      <li>
+       <span class="text-white">
+        Gold
+       </span>
+       Cars
+      </li>
+     </ul>
+    </div>
+    <div class="w-1/2 sm:w-1/3 md:w-1/6">
+     <h3 class="text-white text-lg font-normal mb-3">
+      Cars by Province
+     </h3>
+     <ul class="space-y-1 text-sm leading-6">
+      <li>
+       Cars in Punjab
+      </li>
+      <li>
+       Cars in Sindh
+      </li>
+      <li>
+       Cars in KPK
+      </li>
+      <li>
+       Cars in Balochistan
+      </li>
+      <li>
+       Cars in Azad Kashmir
+      </li>
+      <li>
+       Cars in Federally Administered Tribal Areas
+      </li>
+     </ul>
+    </div>
+   </div>
+   <hr class="border-t border-[#2c343c] mt-10"/>
+   <div class="text-center text-[#7a7a7a] text-sm mt-6 space-y-2 max-w-[600px] mx-auto">
+    <p>
+     Copyright © 2003 - 2025 PakWheels (Pvt) Ltd. - All Rights Reserved. <br>
+     Made by Mursaleen Ahmed
+    </p>
+    <p>
+     Terms of Service | Privacy Policy
+    </p>
+    <p>
+     Reproduction of material from any PakWheels.com pages without permission is strictly prohibited.
+    </p>
+   </div>
+  </footer>
+
+        <script>
+            const carousel = document.getElementById("carousel");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+
+            prevBtn.addEventListener("click", () => {
+                carousel.scrollBy({ left: -280, behavior: "smooth" });
+            });
+
+            nextBtn.addEventListener("click", () => {
+                carousel.scrollBy({ left: 280, behavior: "smooth" });
+            });
+            const container = document.querySelector(
+                ".flex.space-x-6.overflow-x-auto.scrollbar-hide"
+            );
+            function scrollLeft() {
+                container.scrollBy({ left: -300, behavior: "smooth" });
+            }
+            function scrollRight() {
+                container.scrollBy({ left: 300, behavior: "smooth" });
+            }
+        </script>
+    </body>
+
+    </html>
